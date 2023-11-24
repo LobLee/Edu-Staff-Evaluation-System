@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100px;
+    margin-right: 500px; /* You might want to adjust this value */
+    
+
+
+}
+
+/* Navigation Styles */
+.navigation {
+    width: 275px;
+    background-color: #0c75de;
+    color: #ecf0f1;
+    height: 100vh;
+    transition: 0.5s;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 20px;
+    font-size: x-large;
+    height: 50px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation li {
+    margin-bottom: 20px;
+}
+
+.navigation .icon {
+    margin-right: 10px;
+}
+
+.navigation.active {
+    width: 80px;
+}
+
+/* Main Content Styles */
+.main {
+    display: flex;
+    flex-direction: column; /* Adjusted for stacking items vertically */
+    height: 100vh;
+    padding: 5px;
+    transition: 0.5s;
+    width: calc(100% - 275px); /* Adjusted for the width of the navigation */
+    margin-left: 275px; /* Added margin to create space for the navigation */
+}
+
+.topbar {
+    padding: 10px;
+    color: #1e61f2ee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-left: 0;
+}
+
+.toggle {
+    
+    height: 60px;
+    width: 60px;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .navigation.active {
+        width: 100%;
+        position: fixed;
+    }
+
+    .main.active {
+        margin-left: 0;
+        width: 100%; /* Adjusted for full width */
+        position: fixed;
+    }
+}
